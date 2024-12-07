@@ -8,13 +8,20 @@ hairColor="Brown">
 
 <!-- <app-people-list></app-people-list>
 <app-event-handling></app-event-handling> -->
-<app-multiple-choice
+<!-- <!-- <app-multiple-choice
 (aClick)="doSomething()"
 (bClick)="doSomethingElse()"
 (cClick)="doAnotherThing()"
 (dClick)="doSomething()"
 ></app-multiple-choice>
 
+<br>
+<hr>
 
+ <app-congratulations *ngIf="count > 10 "></app-congratulations> 
 
+<app-congratulations [count]="count" [threshold]="threshold"></app-congratulations>
+ <app-counter [count]="count" (increment)="incrementNumber()" (decrement)="decrementNumber()"></app-counter>
+
+ -->
 <router-outlet />
