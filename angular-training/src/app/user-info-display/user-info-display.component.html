@@ -1,0 +1,6 @@
+<h1>User Info</h1>
+<div *ngIf="user && !isLoading">
+  <p>Name: {{ user.name.title + " " + user.name.first + " " + user.name.last }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Phone: {{ user.phone }}</p>
+</div>

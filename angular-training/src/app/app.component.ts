@@ -7,16 +7,18 @@ import { MultipleChoiceComponent } from './multiple-choice/multiple-choice.compo
 import { CounterComponent } from './counter/counter.component';
 import { CongratulationsComponent } from './congratulations/congratulations.component';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from './navbar/navbar.component';
+import { UserInfoDisplayComponent } from './user-info-display/user-info-display.component';
+import { UserInfoFormComponent } from './user-info-form/user-info-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, ExampleComponent, PeopleListComponent, 
-    EventHandlingComponent, MultipleChoiceComponent, CounterComponent,
-   CongratulationsComponent, CommonModule],
-
+   CongratulationsComponent, CommonModule, NavbarComponent, UserInfoFormComponent, UserInfoDisplayComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  
 })
 export class AppComponent {
   title = 'angular-training';
@@ -42,3 +44,7 @@ export class AppComponent {
     this.count--;
   }
 }
+function withInterceptorsFromDi(): import("@angular/common/http").HttpFeature<import("@angular/common/http").HttpFeatureKind> {
+  throw new Error('Function not implemented.');
+}
+
